@@ -15,6 +15,7 @@
             height: 100vh;
             width: 100vw;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             color: black;
@@ -42,6 +43,14 @@
             position: relative;
             z-index: 1;
         }
+        footer {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+            color: white;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+        }
     </style>
 </head>
 <body>
@@ -51,7 +60,8 @@
         </div>
     </div>
     <script>
-        document.body.style.backgroundImage = "url('https://source.unsplash.com/random/1920x1080')";
+        const randomImage = `https://picsum.photos/1920/1080?random=${Math.floor(Math.random() * 1000)}`;
+        document.body.style.backgroundImage = `url(${randomImage})`;
     </script>
 </body>
 </html>
